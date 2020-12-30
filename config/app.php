@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * https://socialiteproviders.com/
+         */
+        \SocialiteProviders\Manager\ServiceProvider::class,
+
     ],
 
     /*

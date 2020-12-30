@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('auth')->group(function () {
+    Route::get('twitter', 'AuthController@login');
+    Route::get('twitter/callback', 'AuthController@callback');
+});
