@@ -17,7 +17,7 @@ class Question extends Model
         $image = new Imagick(resource_path('images/ogp.png'));
 
         $draw = new ImagickDraw();
-        $draw->setFont(resource_path('fonts/MPLUS1p-Regular.ttf'));
+        $draw->setFont(resource_path('fonts/NotoSerifJP-Bold.otf'));
         $draw->setFontSize(24);
         $draw->setTextAlignment(Imagick::ALIGN_CENTER);
         $lines = explode("\n", $body);
