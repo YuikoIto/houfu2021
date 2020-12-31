@@ -18,7 +18,7 @@ class QuestionController extends Controller
         $question->body = $request->input('body');
         $question->save();
 
-        session()->flash('success', '質問を投稿しました。');
+        session()->flash('success', '抱負を投稿しました。');
         return redirect("users/{$user->unique_id}");
     }
 }
