@@ -21,3 +21,7 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::resource('users', 'UserController')->only(['show']);
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('questions', 'QuestionController')->only(['store']);
+});
