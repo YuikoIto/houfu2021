@@ -25,3 +25,5 @@ Route::resource('users', 'UserController')->only(['show']);
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('questions', 'QuestionController')->only(['store']);
 });
+
+Route::get('questions/{id}/ogp.png', 'QuestionController@ogp');

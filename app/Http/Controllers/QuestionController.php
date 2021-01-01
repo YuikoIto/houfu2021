@@ -21,4 +21,18 @@ class QuestionController extends Controller
         session()->flash('success', '抱負を投稿しました。');
         return redirect("users/{$user->unique_id}");
     }
+
+    public function ogp($id)
+    {
+        $question = Question::findOrFail($id);
+        $image = $question->generateOgp();
+        return response($image, 200)
+            ->header('Content-Type', 'image/png');
+    }
+
+    public function show($id)
+    {
+        $question = Question::findOrFail($id);
+        return view('question.show', compact('question'));
+    }
 }

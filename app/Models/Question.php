@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Imagick;
 use ImagickDraw;
+use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
